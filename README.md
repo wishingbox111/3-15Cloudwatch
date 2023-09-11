@@ -1,5 +1,26 @@
 # 3-15Cloudwatch
 
+
+-see Coaching.pptx
+
+- git clone
+- npm init * right after git clone
+- npm install serverless * don't need this?
+- npm install serverless-offline –save-dev * i think is after putting index.js and serverless.yml without the environment in serverless.yml yet
+
+- Had to install serverless again at serverless plugin install -n serverless-offline
+
+After installation then it seems to work.
+
+- serverless deploy #to deploy serverless application *check that lambda is added under your service name
+- serverless remove #to remove serverless application on lambda
+- .gitignore (add node_modules/ and .serverless)
+
+
+
+
+--------------------------------------------
+
 secret manager's code:
 
 // Use this code snippet in your app.
