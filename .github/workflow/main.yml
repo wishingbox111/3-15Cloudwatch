@@ -86,6 +86,19 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Show the Secret value
         run: |
-          for var in $(env | grep 'name_reference'); do
+          for var in $(env | grep 'chen-Secret'); do
             echo "Variable: $var"
           done
+
+  post-deploy-monitor:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout repo code
+        uses: actions/checkout@v3
+      - name: Run Snyk to monitor vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
