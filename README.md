@@ -16,7 +16,8 @@ After installation then it seems to work.
 - serverless remove #to remove serverless application on lambda
 - .gitignore (add node_modules/ and .serverless)
 
-
+_References_
+- https://github.com/pglim/m3l15v1
 
 
 --------------------------------------------
